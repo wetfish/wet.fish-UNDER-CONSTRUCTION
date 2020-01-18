@@ -10,11 +10,19 @@
 
         <style>
             /* Lookin' good */
+            @font-face {
+                font-family: 'Dosis';
+                src: url('./font/Dosis-VF.ttf');
+            }
+
             body {
                 background: url('img/cloudy-ocean.svg');
                 background-position: top center;
                 background-repeat: no-repeat;
                 background-size: cover;
+                color: #fff;
+                font-family: 'Dosis';
+                font-size: 2em;
                 margin: 0;
                 padding: 0;
             }
@@ -26,9 +34,18 @@
     </head>
 
     <body>
-        <!-- Stuff goes here! -->
-        <img src="img/sea-weed.svg">
-        <img src="img/bulldozer.svg">
-        <img src="img/ocean-floor.svg">
+        <section class="background">
+            <img src="img/sea-weed.svg">
+            <img src="img/bulldozer.svg">
+            <img src="img/ocean-floor.svg">
+        </section>
+
+        <section class="foreground">
+            <h1>Umm, hey there.</h1>
+
+            <p>
+                Lol website coming soon. Special shoutout to Qwan &lt;3
+            </p>
+        </section>
     </body>
 </html>
