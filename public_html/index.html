@@ -16,19 +16,35 @@
             }
 
             body {
-                background: url('img/cloudy-ocean.svg');
-                background-position: top center;
+                background-image: linear-gradient(#0444b1, #2d1d8f);
                 background-repeat: no-repeat;
-                background-size: cover;
                 color: #fff;
                 font-family: 'Dosis';
                 font-size: 2em;
                 margin: 0;
+                min-height: 100vh;
+                min-width: 100vw;
                 padding: 0;
+            }
+
+            section.background {
+                background-image: url('img/cloudy-ocean.svg');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 100vh;
+                min-width: 100%;
+            }
+
+            section.foreground {
+                position: absolute;
+                top: 30vh;
+                left: 15vw;
             }
 
             img {
                 position: absolute;
+                bottom: 0;
             }
         </style>
     </head>
