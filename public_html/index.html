@@ -33,8 +33,8 @@
 
             main {
                 background-image: url('img/cloudy-ocean.svg');
-                background-position: 81% 0%;
                 background-repeat: no-repeat;
+                background-position: 80% 0%;
                 background-size: auto 1000px;
                 min-height: 100vh;
                 min-width: 100%;
@@ -61,7 +61,6 @@
                 flex-direction: column;
                 justify-content: center;
                 min-height: 100vh;
-                min-width: 100vw;
                 padding: 1em 0.8em;
                 box-sizing: border-box;
             }
@@ -90,8 +89,35 @@
                 margin-bottom: 5em;
             }
 
-            /* For big screens */
-            @media (min-width: 1024px) or (min-height: 1024px) {
+            /* For tablets */
+            @media (min-width: 600px) or (min-height: 768px) {
+                main {
+                    background-size: auto 1200px;
+                }
+
+                .flex {
+                    max-width: 85vw;
+                    margin: 0 auto;
+                }
+            }
+
+            @media (min-width: 960px) or (min-height: 1024px) {
+                body {
+                    font-size: 1.3em;
+                }
+
+                main {
+                    background-size: auto 1400px;
+                }
+
+                .flex {
+                    max-width: 75vw;
+                    margin: 0 auto;
+                }
+            }
+
+            /* For computers */
+            @media (min-width: 1281px) or (min-height: 1281px) {
                 body {
                     font-size: 1.5em;
                 }
@@ -103,6 +129,17 @@
 
                 h1 {
                     font-size: 64pt;
+                }
+
+                .foreground {
+                    padding-top: 4.5em;
+                    padding-left: 9em;
+
+                }
+
+                .flex {
+                    max-width: 44vw;
+                    margin: 0;
                 }
             }
         </style>
