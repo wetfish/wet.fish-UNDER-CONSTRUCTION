@@ -23,7 +23,7 @@
                 background-image: linear-gradient(#0444b1, #2d1d8f);
                 background-repeat: no-repeat;
                 color: #fff;
-                font-family: "DejaVuSans",sans-serif;
+                font-family: "DejaVuSans", sans-serif;
                 font-size: 1.2em;
                 margin: 0;
                 min-height: 100vh;
@@ -31,27 +31,25 @@
                 padding: 0;
             }
 
-            section.background {
+            main {
                 background-image: url('img/cloudy-ocean.svg');
-                background-position: 80% 0%;
+                background-position: 81% 0%;
                 background-repeat: no-repeat;
-                background-size: cover;
+                background-size: auto 1000px;
                 min-height: 100vh;
                 min-width: 100%;
+                position: relative;
             }
 
-            section.background img {
+            .background {
                 position: absolute;
                 bottom: 0;
             }
 
             section.foreground {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                padding: 1em 1.2em;
+                min-height: 100vh;
+                min-width: 100vw;
+                position: relative;
             }
 
             section.foreground p {
@@ -62,12 +60,15 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                height: 100%;
+                min-height: 100vh;
+                min-width: 100vw;
+                padding: 1em 0.8em;
+                box-sizing: border-box;
             }
 
             h1 {
                 font-size: 44pt;
-                font-family: 'Dosis',sans-serif;
+                font-family: 'Dosis', sans-serif;
             }
 
             .yellow {
@@ -84,28 +85,20 @@
                 border: 3px solid #fff;
                 display: inline-block;
                 border-radius: 44px;
-                font-family: 'Dosis',sans-serif;
+                font-family: 'Dosis', sans-serif;
                 font-size: 1.5em;
-                margin-bottom: 3em;
+                margin-bottom: 5em;
             }
 
-            /* For tall devices */
-
-            /* For wide devices */
-            @media (min-width: 500px) {
-                section.background {
-                    background-position: 85% 0%;
+            /* For big screens */
+            @media (min-width: 1024px) or (min-height: 1024px) {
+                body {
+                    font-size: 1.5em;
                 }
 
-                section.foreground {
-                    max-width: 65vw;
-                    margin: 0 auto;
-                }
-            }
-
-            @media (min-width: 1024px) {
-                section.background {
+                main {
                     background-position: top center;
+                    background-size: cover;
                 }
 
                 h1 {
@@ -116,28 +109,28 @@
     </head>
 
     <body>
-        <section class="background">
-            <img src="img/sea-weed.svg">
-            <img src="img/bulldozer.svg">
-            <img src="img/ocean-floor.svg">
-        </section>
+        <main>
+            <img class="background" src="img/sea-weed.svg">
+            <img class="background" src="img/bulldozer.svg">
+            <img class="background" src="img/ocean-floor.svg">
 
-        <section class="foreground">
-            <div class="flex">
-                <h1>Under <span class="yellow">Construction</span></h1>
+            <section class="foreground">
+                <div class="flex">
+                    <h1>Under <span class="yellow">Construction</span></h1>
 
-                <p>
-                    Wetfish is a collective of artists, programmers, and scientists working towards a sustainable future&mdash;for fun and profit.
-                </p>
+                    <p>
+                        Wetfish is a collective of artists, programmers, and scientists working together to build a sustainable future&mdash;for fun and profit.
+                    </p>
 
-                <p>
-                    Check back soon for our redesigned web experience.
-                </p>
+                    <p>
+                        Check back soon for our redesigned web experience.
+                    </p>
 
-                <a href="mailto:hello@wetfish.net" class="button">
-                    Get In Touch
-                </a>
-            </div>
-        </section>
+                    <a href="mailto:hello@wetfish.net" class="button">
+                        Get In Touch
+                    </a>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
