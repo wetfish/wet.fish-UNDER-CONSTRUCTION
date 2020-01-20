@@ -15,11 +15,15 @@
                 src: url('./font/Dosis-VF.ttf');
             }
 
+            h1, h2, h3, h4, h5, h6, p {
+                margin: 0;
+            }
+
             body {
                 background-image: linear-gradient(#0444b1, #2d1d8f);
                 background-repeat: no-repeat;
                 color: #fff;
-                font-family: 'Dosis';
+                font-family: 'Dosis', sans-serif;
                 font-size: 2em;
                 margin: 0;
                 min-height: 100vh;
@@ -29,22 +33,56 @@
 
             section.background {
                 background-image: url('img/cloudy-ocean.svg');
-                background-position: top center;
+                background-position: 82% 0%;
                 background-repeat: no-repeat;
                 background-size: cover;
                 min-height: 100vh;
                 min-width: 100%;
             }
 
-            section.foreground {
-                position: absolute;
-                top: 30vh;
-                left: 15vw;
-            }
-
-            img {
+            section.background img {
                 position: absolute;
                 bottom: 0;
+            }
+
+            section.foreground {
+                position: absolute;
+                top: 25vh;
+                left: 0;
+                padding: 0.5em;
+            }
+
+            section.foreground p {
+                margin-top: 0.5em;
+            }
+
+            /* For tall devices */
+            @media (min-height: 1024px) {
+                section.foreground {
+                    top: 33vh;
+                }
+            }
+
+            /* For wide devices */
+            @media (min-width: 400px) {
+                section.foreground {
+                    padding: 5vh 10vw;
+                }
+            }
+
+            @media (min-width: 500px) {
+                section.foreground {
+                    padding: 5vh 20vw;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                section.background {
+                    background-position: top center;
+                }
+
+                section.foreground {
+                }
             }
         </style>
     </head>
