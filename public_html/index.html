@@ -23,8 +23,8 @@
                 background-image: linear-gradient(#0444b1, #2d1d8f);
                 background-repeat: no-repeat;
                 color: #fff;
-                font-family: 'Dosis', sans-serif;
-                font-size: 2em;
+                font-family: "DejaVuSans",sans-serif;
+                font-size: 1.2em;
                 margin: 0;
                 min-height: 100vh;
                 min-width: 100vw;
@@ -33,7 +33,7 @@
 
             section.background {
                 background-image: url('img/cloudy-ocean.svg');
-                background-position: 82% 0%;
+                background-position: 80% 0%;
                 background-repeat: no-repeat;
                 background-size: cover;
                 min-height: 100vh;
@@ -47,32 +47,59 @@
 
             section.foreground {
                 position: absolute;
-                top: 25vh;
+                top: 0;
                 left: 0;
-                padding: 0.5em;
+                right: 0;
+                bottom: 0;
+                padding: 1em 1.2em;
             }
 
             section.foreground p {
-                margin-top: 0.5em;
+                margin-top: 1.5em;
+            }
+
+            .flex {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+            }
+
+            h1 {
+                font-size: 44pt;
+                font-family: 'Dosis',sans-serif;
+            }
+
+            .yellow {
+                color: #ffcc1b;
+            }
+
+            .button {
+                text-decoration: none;
+                color: #fff;
+                background-color: rgba(45, 29, 143, 0.5);
+                margin: 1.25em 0;
+                align-self: center;
+                padding: 0.5em 1em;
+                border: 3px solid #fff;
+                display: inline-block;
+                border-radius: 44px;
+                font-family: 'Dosis',sans-serif;
+                font-size: 1.5em;
+                margin-bottom: 3em;
             }
 
             /* For tall devices */
-            @media (min-height: 1024px) {
-                section.foreground {
-                    top: 33vh;
-                }
-            }
 
             /* For wide devices */
-            @media (min-width: 400px) {
-                section.foreground {
-                    padding: 5vh 10vw;
-                }
-            }
-
             @media (min-width: 500px) {
+                section.background {
+                    background-position: 85% 0%;
+                }
+
                 section.foreground {
-                    padding: 5vh 20vw;
+                    max-width: 65vw;
+                    margin: 0 auto;
                 }
             }
 
@@ -81,7 +108,8 @@
                     background-position: top center;
                 }
 
-                section.foreground {
+                h1 {
+                    font-size: 64pt;
                 }
             }
         </style>
@@ -95,11 +123,21 @@
         </section>
 
         <section class="foreground">
-            <h1>Umm, hey there.</h1>
+            <div class="flex">
+                <h1>Under <span class="yellow">Construction</span></h1>
 
-            <p>
-                Lol website coming soon. Special shoutout to Qwan &lt;3
-            </p>
+                <p>
+                    Wetfish is a collective of artists, programmers, and scientists working towards a sustainable future&mdash;for fun and profit.
+                </p>
+
+                <p>
+                    Check back soon for our redesigned web experience.
+                </p>
+
+                <a href="mailto:hello@wetfish.net" class="button">
+                    Get In Touch
+                </a>
+            </div>
         </section>
     </body>
 </html>
