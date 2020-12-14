@@ -27,11 +27,11 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
     padding: 0;
     margin: 0;
+    max-height: 100vh;
+    overflow: hidden;
   }
 
   .sand {
@@ -50,5 +50,15 @@ export default {
   .kelp img {
     max-height: 80vh;
     padding: 0 4em;
+    transform-origin: bottom center;
+    animation-name: sway;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes sway {
+    0% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    100% { transform: rotate(15deg); }
   }
 </style>
