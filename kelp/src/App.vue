@@ -4,19 +4,19 @@
   </div>
 
   <section class="kelp">
-    <img src="./assets/kelp.svg">
+    <Kelp />
     <img src="./assets/ghost-kelp.svg">
     <img src="./assets/blue-kelp.svg">
   </section>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
+import Kelp from './components/Kelp.vue'
 
 export default {
-  name: 'Kelp',
+  name: 'Ocean',
   components: {
-//    HelloWorld
+    Kelp
   }
 }
 </script>
@@ -54,6 +54,18 @@ export default {
     animation-name: sway;
     animation-duration: 30s;
     animation-iteration-count: infinite;
+  }
+
+  .kelp img:nth-of-type(1) {
+    animation-delay: 1s;
+  }
+
+  .kelp img:nth-of-type(2) {
+    animation-delay: 2s;
+  }
+
+  .kelp img:nth-of-type(3) {
+    animation-delay: 3s;
   }
 
   @keyframes sway {
