@@ -5,8 +5,11 @@
 
   <section class="kelp">
     <Kelp />
-    <img src="./assets/ghost-kelp.svg">
-    <img src="./assets/blue-kelp.svg">
+    <Kelp species="blue" />
+    <Kelp species="ghost" />
+    <Kelp species="blue" />
+    <Kelp species="ghost" />
+    <Kelp />
   </section>
 </template>
 
@@ -43,7 +46,7 @@ export default {
 
   .kelp {
     position: absolute;
-    width: 100%;
+    width: 5000px;
     bottom: 0.5em;
   }
 
