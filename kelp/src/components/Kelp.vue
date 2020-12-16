@@ -11,6 +11,7 @@
       },
 
       height: Number,
+      width: Number,
       flipped: Boolean
     },
 

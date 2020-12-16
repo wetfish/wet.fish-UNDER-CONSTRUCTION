@@ -1,7 +1,7 @@
 <template>
-  <div class="sand">
+  <section class="sand">
     <img src="./assets/sand.svg">
-  </div>
+  </section>
 
   <section class="kelp">
     <Kelp />
@@ -11,17 +11,26 @@
     <Kelp species="ghost" />
     <Kelp />
   </section>
+
+  <section class="bubbles">
+    <Bubble />
+    <Bubble />
+    <Bubble />
+    <Bubble />
+  </section>
 </template>
 
 <script>
-import Kelp from './components/Kelp.vue'
+  import Kelp from './components/Kelp.vue';
+  import Bubble from './components/Bubble.vue';
 
-export default {
-  name: 'Ocean',
-  components: {
-    Kelp
+  export default {
+    name: 'Ocean',
+    components: {
+      Kelp,
+      Bubble
+    }
   }
-}
 </script>
 
 <style>
@@ -41,7 +50,7 @@ export default {
     position: absolute;
     width: 100%;
     bottom: 0;
-    z-index: 2;
+    z-index: 100;
   }
 
   .kelp {
@@ -68,6 +77,22 @@ export default {
 
   .kelp img:nth-of-type(3) {
     animation-delay: 3s;
+  }
+
+  .bubble:nth-of-type(1) {
+    animation-delay: 1s;
+    margin-left: 19em;
+  }
+
+  .bubble:nth-of-type(2) {
+    animation-delay: 2s;
+    margin-left: 21em;
+    font-size: 1.5em;
+  }
+
+  .bubble:nth-of-type(3) {
+    animation-delay: 3s;
+    margin-left: 22em;
   }
 
   @keyframes sway {
