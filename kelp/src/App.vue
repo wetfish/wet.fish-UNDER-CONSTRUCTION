@@ -52,7 +52,6 @@ export default {
 
   .kelp img {
     max-height: 80vh;
-    padding: 0 4em;
     transform-origin: bottom center;
     animation-name: sway;
     animation-duration: 30s;

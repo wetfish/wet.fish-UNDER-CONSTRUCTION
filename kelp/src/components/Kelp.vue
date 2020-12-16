@@ -1,7 +1,5 @@
 <template>
-  <img v-if="species == 'green'" src="../assets/kelp.svg">
-  <img v-if="species == 'blue'" src="../assets/blue-kelp.svg">
-  <img v-if="species == 'ghost'" src="../assets/ghost-kelp.svg">
+  <img :src="speciesUrl">
 </template>
 
 <script>
@@ -12,7 +10,20 @@
         default: "green" // Green, Blue, Ghost
       },
 
-      height: Number
+      height: Number,
+      flipped: Boolean
+    },
+
+    computed: {
+      speciesUrl() {
+        if(this.species == 'blue') {
+          return require("../assets/blue-kelp.svg");
+        } else if(this.species == 'ghost') {
+          return require("../assets/ghost-kelp.svg");
+        } else {
+          return require("../assets/kelp.svg");
+        }
+      }
     }
   }
 </script>
