@@ -18,7 +18,7 @@
     margin-left: 20em;
     z-index: 10;
     position: absolute;
-    animation: float 5s, wiggle 3s;
+    animation: float 3s, wiggle 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
   }

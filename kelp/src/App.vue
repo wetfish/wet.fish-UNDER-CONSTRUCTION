@@ -80,19 +80,19 @@
   }
 
   .bubble:nth-of-type(1) {
-    animation-delay: 1s;
-    margin-left: 19em;
+    animation-delay: 0.5s;
+    margin-left: 18em;
   }
 
   .bubble:nth-of-type(2) {
-    animation-delay: 2s;
-    margin-left: 21em;
+    animation-delay: 1.5s;
+    margin-left: 22em;
     font-size: 1.5em;
   }
 
   .bubble:nth-of-type(3) {
-    animation-delay: 3s;
-    margin-left: 22em;
+    animation-delay: 2s;
+    margin-left: 24em;
   }
 
   @keyframes sway {
