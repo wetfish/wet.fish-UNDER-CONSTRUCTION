@@ -22,7 +22,7 @@
         } else if(this.species == 'ghost') {
           return require("../assets/ghost-kelp.svg");
         } else {
-          return require("../assets/kelp.svg");
+          return require("../assets/green-kelp.svg");
         }
       }
     }

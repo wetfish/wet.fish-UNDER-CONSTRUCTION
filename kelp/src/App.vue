@@ -18,17 +18,25 @@
     <Bubble />
     <Bubble />
   </section>
+
+  <section class="fishes">
+    <Fish />
+    <Fish species="pink" />
+    <Fish species="shark" />
+  </section>
 </template>
 
 <script>
   import Kelp from './components/Kelp.vue';
   import Bubble from './components/Bubble.vue';
+  import Fish from './components/Fish.vue';
 
   export default {
     name: 'Ocean',
     components: {
       Kelp,
-      Bubble
+      Bubble,
+      Fish
     }
   }
 </script>
@@ -47,10 +55,15 @@
   }
 
   .sand {
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 0;
+    height: 100vh;
     z-index: 100;
+  }
+
+  .sand img {
+    position: absolute;
+    bottom: 0;
   }
 
   .kelp {
@@ -77,6 +90,19 @@
 
   .kelp img:nth-of-type(3) {
     animation-delay: 3s;
+  }
+
+  .bubbles {
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .fishes {
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 
   .bubble:nth-of-type(1) {
