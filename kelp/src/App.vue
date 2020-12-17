@@ -121,6 +121,19 @@
     margin-left: 24em;
   }
 
+  .fish:nth-of-type(1) {
+    animation-delay: 1s;
+
+  }
+  .fish:nth-of-type(2) {
+    animation-delay: 5s;
+  }
+
+  .fish:nth-of-type(3) {
+    animation-delay: 10s;
+  }
+
+
   @keyframes sway {
     0% { transform: rotate(15deg); }
     50% { transform: rotate(-15deg); }

@@ -31,8 +31,14 @@
 
 <style lang="scss">
   .fish {
+    margin-top: 20em;
+    position: absolute;
+    animation: swim 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
     &.blue {
-      max-width: 50px;
+      max-width: 70px;
     }
 
     &.pink {
@@ -42,5 +48,10 @@
     &.shark {
       max-width: 700px;
     }
+  }
+
+  @keyframes swim {
+    0% { transform: translateX(100vw) }
+    100% { transform: translateX(-100vw); }
   }
 </style>
