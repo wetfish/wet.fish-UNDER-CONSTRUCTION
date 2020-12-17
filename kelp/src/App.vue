@@ -66,6 +66,10 @@
     bottom: 0;
   }
 
+  .kelp img, .bubble, .fish {
+    animation-fill-mode: backwards;
+  }
+
   .kelp {
     position: absolute;
     width: 5000px;
