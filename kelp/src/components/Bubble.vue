@@ -23,10 +23,6 @@
     animation-timing-function: ease-in;
   }
 
-  .floating {
-
-  }
-
   @keyframes wiggle {
     0% {
       width: 1.4em;
@@ -55,7 +51,7 @@
   }
 
   @keyframes float {
-    0% { transform: translateY(100vh) }
-    100% { transform: translateY(-10vh) }
+    0% { top: 100vh }
+    100% { top: -10vh }
   }
 </style>

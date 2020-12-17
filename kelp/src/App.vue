@@ -42,16 +42,19 @@
 </script>
 
 <style>
+  html, body, #app {
+    overflow: hidden;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+
   body {
     background-image: url('./assets/background.svg'), linear-gradient(#0444b1, #2d1d8f);
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    min-height: 100vh;
     padding: 0;
     margin: 0;
-    max-height: 100vh;
-    overflow: hidden;
   }
 
   .sand {
@@ -78,6 +81,7 @@
 
   .kelp img {
     max-height: 80vh;
+    max-width: 250px;
     transform-origin: bottom center;
     animation-name: sway;
     animation-duration: 30s;
