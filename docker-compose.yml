@@ -1,0 +1,6 @@
+wet.fish:
+  image: nginx:alpine
+  volumes:
+    - ./public_html:/usr/share/nginx/html/
+  ports:
+    - "80:80"
