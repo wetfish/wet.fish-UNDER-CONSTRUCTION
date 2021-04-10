@@ -1,5 +1,5 @@
 wet.fish:
-  image: nginx:alpine
+  image: fishnet/wet.fish
   volumes:
     - ./public_html:/usr/share/nginx/html/
   ports:
